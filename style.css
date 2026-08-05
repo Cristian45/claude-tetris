@@ -150,3 +150,19 @@ kbd {
 #restart-btn:hover {
   background: #9bbdff;
 }
+
+/* ---- Start screen ---- */
+.start-title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  color: #7aa2f7;
+}
+
+/* ---- pause menu (owned by the pause-menu unit) ---- */
+
+/* ---- records (owned by the highscores unit) ---- */
+
+/* ---- skins (owned by the skins unit) ---- */
+
+/* ---- combo (owned by the combo-tracking unit) ---- */

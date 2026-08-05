@@ -25,6 +25,8 @@
           <span class="value" id="level">1</span>
         </div>
 
+        <!-- SLOT-D: combo hud -->
+
         <div class="panel-section">
           <span class="label">NEXT</span>
           <canvas id="next-canvas" width="120" height="120"></canvas>
@@ -40,6 +42,8 @@
             <li><kbd>P</kbd> pausa</li>
           </ul>
         </div>
+
+        <!-- SLOT-C2: skin selector -->
       </aside>
     </div>
 
@@ -47,11 +51,40 @@
       <div class="overlay-box">
         <p id="overlay-title">GAME OVER</p>
         <p id="overlay-score"></p>
+        <!-- SLOT-B2: name entry + top-5 list -->
         <button id="restart-btn">Reiniciar</button>
+      </div>
+    </div>
+
+    <div id="pause-overlay" class="overlay hidden">
+      <div class="overlay-box">
+        <p id="pause-overlay-title">PAUSA</p>
+        <!-- SLOT-A1: pause menu options -->
+      </div>
+    </div>
+
+    <div id="start-screen" class="overlay">
+      <div class="overlay-box">
+        <p class="start-title">TETRIS</p>
+
+        <!-- SLOT-C1: skin selector -->
+
+        <!-- SLOT-B1: top-5 list + best combo / max lines -->
+
+        <!-- SLOT-A2: starting-level selector -->
+
+        <button id="start-btn">JUGAR</button>
       </div>
     </div>
   </div>
 
-  <script src="game.js"></script>
+  <script src="hooks.js"></script>
+  <script src="storage.js"></script>
+  <script src="skins.js"></script>
+  <script src="render.js"></script>
+  <script src="core.js"></script>
+  <script src="ui.js"></script>
+  <script src="pausemenu.js"></script>
+  <script src="highscores.js"></script>
 </body>
 </html>
