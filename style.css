@@ -162,6 +162,135 @@ kbd {
 /* ---- pause menu (owned by the pause-menu unit) ---- */
 
 /* ---- records (owned by the highscores unit) ---- */
+.hs-gameover,
+.hs-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.hs-title {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #555570;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.hs-list {
+  width: 100%;
+}
+
+.hs-list ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.hs-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  min-width: 200px;
+}
+
+.hs-row-highlight {
+  border-color: #7aa2f7;
+  box-shadow: 0 0 8px rgba(122, 162, 247, 0.6);
+  background: rgba(122, 162, 247, 0.1);
+}
+
+.hs-rank {
+  color: #555570;
+  width: 18px;
+}
+
+.hs-name {
+  flex: 1;
+  text-align: left;
+  color: #e0e0e0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hs-score {
+  color: #7aa2f7;
+  font-weight: 700;
+}
+
+.hs-empty {
+  font-size: 12px;
+  color: #888;
+}
+
+.hs-best-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+  color: #888;
+  align-items: center;
+}
+
+.hs-form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.hs-name-input {
+  background: #1a1a25;
+  border: 1px solid #2a2a3a;
+  border-radius: 4px;
+  color: #e0e0e0;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  width: 140px;
+}
+
+.hs-name-input:focus {
+  outline: none;
+  border-color: #7aa2f7;
+}
+
+.hs-save-btn,
+.hs-reset-btn {
+  background: #2a2a3a;
+  color: #e0e0e0;
+  border: 1px solid #3a3a5a;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background 0.15s;
+}
+
+.hs-save-btn {
+  background: #7aa2f7;
+  color: #0f0f17;
+  border: none;
+}
+
+.hs-save-btn:hover {
+  background: #9bbdff;
+}
+
+.hs-reset-btn:hover {
+  background: #3a3a52;
+}
 
 /* ---- skins (owned by the skins unit) ---- */
 
