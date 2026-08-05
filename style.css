@@ -160,6 +160,67 @@ kbd {
 }
 
 /* ---- pause menu (owned by the pause-menu unit) ---- */
+.pause-menu-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  min-width: 220px;
+}
+
+.menu-btn {
+  background: #7aa2f7;
+  color: #0f0f17;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.15s;
+}
+
+.menu-btn:hover {
+  background: #9bbdff;
+}
+
+.menu-btn-secondary {
+  background: transparent;
+  color: #7aa2f7;
+  border: 1px solid #2a2a3a;
+}
+
+.menu-btn-secondary:hover {
+  background: #22223a;
+  border-color: #7aa2f7;
+}
+
+#pause-controls-list {
+  text-align: left;
+}
+
+#pause-controls-list.hidden {
+  display: none;
+}
+
+.level-select-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.level-select-row select {
+  background: #1a1a25;
+  color: #e0e0e0;
+  border: 1px solid #2a2a3a;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+}
 
 /* ---- records (owned by the highscores unit) ---- */
 

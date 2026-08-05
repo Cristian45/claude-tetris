@@ -60,6 +60,24 @@
       <div class="overlay-box">
         <p id="pause-overlay-title">PAUSA</p>
         <!-- SLOT-A1: pause menu options -->
+        <div class="pause-menu-options">
+          <button id="resume-btn" class="menu-btn">Reanudar</button>
+          <button id="pause-restart-btn" class="menu-btn menu-btn-secondary">Reiniciar</button>
+          <button id="toggle-controls-btn" class="menu-btn menu-btn-secondary">Ver controles</button>
+          <div id="pause-controls-list" class="controls hidden">
+            <ul>
+              <li><kbd>←</kbd><kbd>→</kbd> mover</li>
+              <li><kbd>↑</kbd> rotar</li>
+              <li><kbd>↓</kbd> bajar</li>
+              <li><kbd>Space</kbd> caída</li>
+              <li><kbd>P</kbd><kbd>Esc</kbd> pausa</li>
+            </ul>
+          </div>
+          <div class="level-select-row">
+            <label for="pause-level-select">Nivel inicial</label>
+            <select id="pause-level-select"></select>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -72,6 +90,10 @@
         <!-- SLOT-B1: top-5 list + best combo / max lines -->
 
         <!-- SLOT-A2: starting-level selector -->
+        <div class="level-select-row">
+          <label for="start-level-select">Nivel inicial</label>
+          <select id="start-level-select"></select>
+        </div>
 
         <button id="start-btn">JUGAR</button>
       </div>
