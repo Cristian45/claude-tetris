@@ -166,3 +166,20 @@ kbd {
 /* ---- skins (owned by the skins unit) ---- */
 
 /* ---- combo (owned by the combo-tracking unit) ---- */
+.combo-section.hidden {
+  display: none;
+}
+
+.combo-section .value {
+  color: #f7a24d;
+  animation: combo-pulse 0.25s ease-out;
+}
+
+@keyframes combo-pulse {
+  0% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
