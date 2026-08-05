@@ -164,5 +164,80 @@ kbd {
 /* ---- records (owned by the highscores unit) ---- */
 
 /* ---- skins (owned by the skins unit) ---- */
+.skins-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skin-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skin-option {
+  background: #22223a;
+  border: 1px solid #3a3a5a;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #aaa;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.skin-option:hover {
+  background: #2c2c48;
+  color: #ddd;
+}
+
+.skin-option.active {
+  background: #7aa2f7;
+  border-color: #7aa2f7;
+  color: #0f0f17;
+}
+
+body.skin-neon {
+  background: #000000;
+}
+
+body.skin-neon #board,
+body.skin-neon #next-canvas {
+  border-color: #00f6ff;
+  box-shadow: 0 0 24px rgba(0, 246, 255, 0.35);
+}
+
+body.skin-pastel {
+  background: #f5f0fa;
+  color: #4a4458;
+}
+
+body.skin-pastel #board,
+body.skin-pastel #next-canvas {
+  border-color: #d8c8ea;
+}
+
+body.skin-pastel .label {
+  color: #9a8bb0;
+}
+
+body.skin-pastel .value {
+  color: #7a5fd6;
+}
+
+body.skin-pastel kbd {
+  background: #ece3f5;
+  border-color: #d8c8ea;
+  color: #6a5a80;
+}
+
+body.skin-pixel #board,
+body.skin-pixel #next-canvas {
+  image-rendering: pixelated;
+}
 
 /* ---- combo (owned by the combo-tracking unit) ---- */
