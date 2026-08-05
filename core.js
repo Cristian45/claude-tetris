@@ -92,13 +92,31 @@ function clearLines() {
     updateHUD();
   }
 
-  // COMBO-SLOT: combo-tracking unit fills this in.
-  // Expected behavior: on cleared > 0, Stats.combo++ and
-  // Stats.maxCombo = max(Stats.maxCombo, Stats.combo); on cleared === 0
-  // (i.e. a lock with no clear), reset Stats.combo. Also track
-  // Stats.maxLinesAtOnce = max(Stats.maxLinesAtOnce, cleared).
+  if (cleared > 0) {
+    Stats.combo++;
+    Stats.maxCombo = Math.max(Stats.maxCombo, Stats.combo);
+    Stats.maxLinesAtOnce = Math.max(Stats.maxLinesAtOnce, cleared);
+  } else {
+    Stats.combo = -1;
+  }
+  updateComboHUD();
 
   Hooks.onLinesCleared && Hooks.onLinesCleared(cleared);
+}
+
+// Shows the current combo streak while active (Stats.combo >= 0), hides it
+// otherwise. Reads DOM by id the same way init() already reaches into
+// overlay/pauseOverlay (both defined in ui.js) — see CLAUDE.md.
+function updateComboHUD() {
+  const comboSection = document.getElementById('combo-section');
+  const comboEl = document.getElementById('combo');
+  if (!comboSection || !comboEl) return;
+  if (Stats.combo >= 0) {
+    comboEl.textContent = Stats.combo + 1;
+    comboSection.classList.remove('hidden');
+  } else {
+    comboSection.classList.add('hidden');
+  }
 }
 
 function ghostY() {
@@ -174,7 +192,7 @@ function init() {
   level = Storage.get('startLevel', 1);
   paused = false;
   gameOver = false;
-  Stats.combo = 0;
+  Stats.combo = -1;
   Stats.maxCombo = 0;
   Stats.maxLinesAtOnce = 0;
   dropInterval = Math.max(100, 1000 - (level - 1) * 90);
